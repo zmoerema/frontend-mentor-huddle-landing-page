@@ -84,20 +84,25 @@ nav {
 footer {
     background-color: var(--Very-Dark-Cyan);
     color: var(--White);
+    padding-top: 100px;
+    text-align: left;
 
     ul {
         list-style-type: none;
     }
 }
 
-#infos {
-    text-align: left;
+#footer-flex {
     display: flex;
+    margin: 20px 0;
 }
 
 #contact {
+    margin-left: 25px;
+
     li {
-        padding: 15px;
+        padding-left: 20px;
+        margin-bottom: 20px;
     }
 
     #location {
@@ -117,13 +122,11 @@ footer {
 
 #socials {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 15px;
 }
 
 #copyright {
-    text-align: center;
     font-size: 0.5em;
 }
 
@@ -179,13 +182,27 @@ footer {
     }
 
     footer .logo {
-        text-align: left;
         width: 50%;
-        height: 50%;
     }
 
-    #infos {
+    #footer-flex {
         flex-direction: column;
+    }
+
+    .a {
+        padding-top: 50px;
+    }
+
+    .b {
+        padding-bottom: 50px;
+    }
+
+    #socials {
+        justify-content: center;
+    }
+
+    #copyright {
+        text-align: center;
     }
 }
 
@@ -265,13 +282,19 @@ footer {
         width: 20%;
     }
 
-    #infos {
+    #footer-flex {
         align-items: flex-start;
+        gap: 50px;
     }
 
-    #infos > * {   flex: 1; }
+    #contact {
+        flex: 2;
+    }
 
-    #contact { flex: 2; }
+    .about-us,
+    #socials {
+        flex: 1;
+    }
 
     #copyright {
         text-align: right;
