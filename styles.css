@@ -41,18 +41,18 @@ header {
     background-color: var(--Very-Pale-Cyan);
 }
 
-header p {
-    margin: 30px 0;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
 }
 
 #free-trial {
     background-color: var(--White);
+}
+
+#header-grid {
+    display: grid;
 }
 
 .get-started {
@@ -153,8 +153,14 @@ footer {
         font-size: 1em;
     }
 
+    #header-grid {
+        gap: 50px;
+    }
+
     .get-started {
-        padding: 10px 50px;
+        padding: 10px 0;
+        margin: auto;
+        width: 60%;
     }
 
     footer .logo {
@@ -189,15 +195,32 @@ footer {
         height: 15%;
     }
 
-    #header-flex {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 50px;
+    #header-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            ". mockups"
+            "title mockups"
+            "what-is-it mockups"
+            "get-started mockups"
+            ". mockups";
+        gap: 30px;
+    }
+    
+    header h1 {
+        grid-area: title;
+    }
+    
+    header p {
+        grid-area: what-is-it;
+    }
+    
+    header .get-started {
+        grid-area: get-started;
+        width: 50%;
     }
 
-    #mockups {
-        width: 50%;
+    header #mockups {
+        grid-area: mockups;
     }
 
     .objective {
