@@ -66,6 +66,14 @@ nav {
     border-radius: 15px;
 }
 
+.objective {
+    display: flex;
+}
+
+.objective h2 {
+    margin-bottom: 20px;
+}
+
 .objective p {
     color: var(--Grayish-Blue);
     font-size: 0.75em;
@@ -162,6 +170,13 @@ footer {
         margin: auto;
         width: 60%;
     }
+    
+    .objective {
+        flex-direction: column;
+        margin: 30px 0;
+        padding: 50px;
+        gap: 50px;
+    }
 
     footer .logo {
         text-align: left;
@@ -224,7 +239,9 @@ footer {
     }
 
     .objective {
-        display: flex;
+        padding: 50px 100px;
+        justify-content: space-between;
+        align-items: center;
     }
 
     #grow-together,
@@ -234,6 +251,10 @@ footer {
 
     .objective-pic {
         width: 30%;
+    }
+
+    .objective-text {
+        width: 40%;
     }
 
     #ready {
